@@ -4,13 +4,14 @@ using UnityEngine;
 public class ParticleManager : MonoBehaviour
 {
     ParticleSystem particleSys;
+    public Rigidbody2D meteorRigidBody;
+    //public Fading fadingScript;
+    public Animator fadeAnimation;
     [Header("Game Objects")]
     public GameObject explosionGameObject;
     public GameObject felpudoGameObject;
     public GameObject fofuraGameObject;
     public GameObject meteor;
-    [Header("Rigid Body")]
-    public Rigidbody2D meteorRigidBody;
 
     void Start()
     {
@@ -44,11 +45,13 @@ public class ParticleManager : MonoBehaviour
         }
         if (collision.CompareTag("Meteor")) // se colidir com o meteoro, as particulas param
         {
-            StopParticle(); 
+            StopParticle();
             explosionGameObject.SetActive(true); // ativa a explosão
             felpudoGameObject.SetActive(false); // mata felpudo. RIP D:
             fofuraGameObject.SetActive(false); // mata fofura. RIP D:
             meteor.SetActive(false); // destroi o meteoro
+            fadeAnimation.SetBool("isFading", true);
+            //fadingScript.FadeIn();
             Debug.Log("Dios mio");
         }
     }
