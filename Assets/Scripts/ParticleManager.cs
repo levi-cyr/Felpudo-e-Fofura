@@ -3,6 +3,7 @@ using UnityEngine;
 public class ParticleManager : MonoBehaviour
 {
     ParticleSystem particleSys;
+    public GameObject explosion;
     
     void Start()
     {
@@ -13,6 +14,10 @@ public class ParticleManager : MonoBehaviour
     {
         particleSys.Play();
     }
+    void StopParticle() // faz a particula parar
+    {
+        particleSys.Stop();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +25,12 @@ public class ParticleManager : MonoBehaviour
         {
             PlayParticle();
             Debug.Log("Oye como va");
+        }
+        if (collision.CompareTag("Meteor")) // se colidir com o meteoro, as particulas param
+        {
+            StopParticle();
+            explosion.SetActive(true);
+            Debug.Log("Dios mio");
         }
     }
 }
