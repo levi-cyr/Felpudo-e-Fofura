@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &162610779
 Animator:
   serializedVersion: 7
@@ -5297,7 +5297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28ce323f7e0ee4468ee35cdd9f87533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 162610778}
+  explosionGameObject: {fileID: 162610778}
+  felpudoGameObject: {fileID: 1264227491}
+  fofuraGameObject: {fileID: 1418662136}
+  meteor: {fileID: 1038293316}
+  meteorRigidBody: {fileID: 1038293317}
 --- !u!61 &845158617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5469,7 +5473,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 936d41b194ed0b14198901a421df5428, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5577,7 +5581,7 @@ Transform:
   m_GameObject: {fileID: 1107218801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.93, z: 0}
+  m_LocalPosition: {x: 8.87, y: 3.45, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5769,7 +5773,7 @@ Transform:
   m_GameObject: {fileID: 1264227491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.78, y: -2.54, z: 0}
+  m_LocalPosition: {x: -10.39, y: -2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5971,7 +5975,7 @@ Transform:
   m_GameObject: {fileID: 1418662136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.07, y: -2.5, z: 0}
+  m_LocalPosition: {x: 10.63, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

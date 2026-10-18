@@ -1,10 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class ParticleManager : MonoBehaviour
 {
     ParticleSystem particleSys;
-    public GameObject explosion;
-    
+    [Header("Game Objects")]
+    public GameObject explosionGameObject;
+    public GameObject felpudoGameObject;
+    public GameObject fofuraGameObject;
+    public GameObject meteor;
+    [Header("Rigid Body")]
+    public Rigidbody2D meteorRigidBody;
+
     void Start()
     {
         particleSys = GetComponent<ParticleSystem>();
@@ -19,17 +26,29 @@ public class ParticleManager : MonoBehaviour
         particleSys.Stop();
     }
 
+    IEnumerator WaitMeteor(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        print("O meteoro vai cair ó");
+        meteorRigidBody.constraints = RigidbodyConstraints2D.None;
+        meteorRigidBody.WakeUp();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Felpudo") || collision.CompareTag("Fofura")) // caso felpudo ou fofura colidam com o objeto invisivel de onde surge as particulas, ele da play nas particulas
         {
             PlayParticle();
+            StartCoroutine(WaitMeteor(2f));
             Debug.Log("Oye como va");
         }
         if (collision.CompareTag("Meteor")) // se colidir com o meteoro, as particulas param
         {
-            StopParticle();
-            explosion.SetActive(true);
+            StopParticle(); 
+            explosionGameObject.SetActive(true); // ativa a explosão
+            felpudoGameObject.SetActive(false); // mata felpudo. RIP D:
+            fofuraGameObject.SetActive(false); // mata fofura. RIP D:
+            meteor.SetActive(false); // destroi o meteoro
             Debug.Log("Dios mio");
         }
     }
