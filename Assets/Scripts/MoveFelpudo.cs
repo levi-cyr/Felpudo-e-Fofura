@@ -6,7 +6,7 @@ public class MoveFelpudo : MonoBehaviour
     public float spawnTime = 2f;
     public float spawnDelay = 2f;
     public bool isMoving = true;
-
+    
     void Start()
     {
         moveSpeed = Vector3.right * Time.deltaTime;

@@ -6,9 +6,8 @@ public class MoveFofura : MonoBehaviour
 	public Vector3 moveSpeed;
 	public float spawnTime = 2f;
 	public float spawnDelay = 2f;
-	  public bool isMoving = true;
+	public bool isMoving = true;
 
-	// Use this for initialization
 	void Start()
 	{
 		moveSpeed = Vector3.left * Time.deltaTime;
@@ -28,9 +27,9 @@ public class MoveFofura : MonoBehaviour
 	void Update()
 	{
 		if (isMoving) // se a chave que checa se o player esta se movendo for verdadeira, ele pode se movimentar
-        {
-            transform.position += moveSpeed; 
-        }
+		{
+			transform.position += moveSpeed;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
