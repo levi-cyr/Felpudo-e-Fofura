@@ -5,7 +5,7 @@ Game created for the "Game Programming" course - Felpudo e Fofura. Developed usi
 ![Platform](https://img.shields.io/badge/Platform-Unity%20Play-blue?style=flat)
 
 > Advisor: Murilo Boratto <br>
-> Game produced using Unity. 
+> Game produced using Unity, published on Unity Play.  
 
 <img alt="Felpudo e Fofura - Thumbnail" src="Thumbnail.png"/>
 
