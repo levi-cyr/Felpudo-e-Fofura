@@ -28,10 +28,10 @@ public class ParticleManager : MonoBehaviour
 
     IEnumerator WaitMeteor(float waitTime)
     {
-        yield return new WaitForSeconds(waitTime);
-        print("O meteoro vai cair ó");
-        meteorRigidBody.constraints = RigidbodyConstraints2D.None;
-        meteorRigidBody.WakeUp();
+        yield return new WaitForSeconds(waitTime); // espera um tempo determinado e toca tudo abaixo
+        Debug.Log("O meteoro vai cair ó");
+        meteorRigidBody.constraints = RigidbodyConstraints2D.None; // quando a 'courrotine' é chamada, libera os eixos do meteoro
+        meteorRigidBody.WakeUp(); // acorda o rigidBody do meteoro para que ele possa cair
     }
 
     void OnTriggerEnter2D(Collider2D collision)
