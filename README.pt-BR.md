@@ -9,5 +9,7 @@ Jogo criado para a disciplina de "Programação de Jogos" - Felpudo e Fofura. De
 
 <img alt="Felpudo e Fofura - Miniatura" src="Thumbnail.png"/>
 
+https://github.com/user-attachments/assets/a91276fd-e127-446a-a4bd-d61a34e702ac
+
 ### Assets
 Efeito sonoro: https://www.youtube.com/shorts/i9te4d23iik
