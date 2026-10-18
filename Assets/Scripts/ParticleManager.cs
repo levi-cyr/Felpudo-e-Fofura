@@ -5,7 +5,6 @@ public class ParticleManager : MonoBehaviour
 {
     ParticleSystem particleSys;
     public Rigidbody2D meteorRigidBody;
-    //public Fading fadingScript;
     public Animator fadeAnimation;
     [Header("Game Objects")]
     public GameObject explosionGameObject;
@@ -51,7 +50,6 @@ public class ParticleManager : MonoBehaviour
             fofuraGameObject.SetActive(false); // mata fofura. RIP D:
             meteor.SetActive(false); // destroi o meteoro
             fadeAnimation.SetBool("isFading", true);
-            //fadingScript.FadeIn();
             Debug.Log("Dios mio");
         }
     }
