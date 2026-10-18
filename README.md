@@ -9,5 +9,7 @@ Game created for the "Game Programming" course - Felpudo e Fofura. Developed usi
 
 <img alt="Felpudo e Fofura - Thumbnail" src="Thumbnail.png"/>
 
+https://github.com/user-attachments/assets/a91276fd-e127-446a-a4bd-d61a34e702ac
+
 ### Assets
 Sound effect: https://www.youtube.com/shorts/i9te4d23iik
